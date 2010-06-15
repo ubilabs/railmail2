@@ -10,6 +10,9 @@ module Railmail
         
         r.recipients = mail.to
         r.from = mail.from
+        r.reply_to = mail.reply_to
+        r.cc = mail.cc
+        r.bcc = mail.bcc
         r.subject = mail.subject
         r.sent_at = Time.now
         r.raw = mail

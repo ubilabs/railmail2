@@ -3,6 +3,9 @@ class RailmailDelivery < ActiveRecord::Base
   serialize :from
   serialize :headers
   serialize :raw
+  serialize :reply_to
+  serialize :bcc
+  serialize :cc
   
   def new?
     read_at.nil?
