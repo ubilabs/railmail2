@@ -5,12 +5,15 @@ Rail Mail is a plugin for ruby on rails that gives you a persisted view of any m
 
 
 Usage:
+======
 
 in environment file:
 
 config.action_mailer.delivery_method = :railmail
 
-to also send mails after storage:
+
+To also send mails after storage:
+=================================
 
 config.after_initialize do 
   Railmail::ActionMailer::InstanceMethods.railmail_settings[:passthrough] = :sendmail 
