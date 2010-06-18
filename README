@@ -2,3 +2,17 @@ Railmail
 ========
 
 Rail Mail is a plugin for ruby on rails that gives you a persisted view of any mail your application has sent.  It is both a development aid and an administrative helper.
+
+
+Usage:
+
+in environment file:
+
+config.action_mailer.delivery_method = :railmail
+
+to also send mails after storage:
+
+config.after_initialize do 
+  Railmail::ActionMailer::InstanceMethods.railmail_settings[:passthrough] = :sendmail 
+end
+
